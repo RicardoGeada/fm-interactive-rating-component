@@ -1,29 +1,45 @@
+import "./RatingCard.css";
+import starIcon from "./../../assets/images/icon-star.svg";
+import {useMediaQuery} from "react-responsive";
+
 function RatingCard() {
+  const isTablet = useMediaQuery({query: "(min-width: 768px)"});
+
   return (
-    <article>
+    <article className="rating-card">
       <div className="icon">
-        <img src="" alt="star icon" />
+        <img src={starIcon} alt="star icon" />
       </div>
-      <h1>How did we do?</h1>
-      <p>
+      <h1 className={isTablet ? "tp-1-bold" : "tp-2-bold"}>How did we do?</h1>
+      <p className={isTablet ? "tp-4-regular" : "tp-5-regular"}>
         Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering!
       </p>
       <form action="">
-        <fieldset>
-            <legend>Rating options</legend>
-            <label htmlFor="rating-1">1</label>
-            <input type="radio" name="rating" id="rating-1" value={1} />
-            <label htmlFor="rating-2">2</label>
-            <input type="radio" name="rating" id="rating-2" value={2} />
-            <label htmlFor="rating-3">3</label>
-            <input type="radio" name="rating" id="rating-3" value={3} />
-            <label htmlFor="rating-4">4</label>
-            <input type="radio" name="rating" id="rating-4" value={4} />
-            <label htmlFor="rating-5">5</label>
-            <input type="radio" name="rating" id="rating-5" value={5} />
+        <fieldset className="rating-options">
+            <legend className="sr-only">Rating options</legend>
+            <label className="rating-option tp-3-bold">
+              <span>1</span>
+              <input type="radio" name="rating" value={1} />
+            </label>
+            <label className="rating-option tp-3-bold">
+              <span>2</span>
+              <input type="radio" name="rating" value={2} />
+            </label>
+            <label className="rating-option tp-3-bold">
+              <span>3</span>
+              <input type="radio" name="rating" value={3} />
+            </label>
+            <label className="rating-option tp-3-bold">
+              <span>4</span>
+              <input type="radio" name="rating" value={4} />
+            </label>
+            <label className="rating-option tp-3-bold">
+              <span>5</span>
+              <input type="radio" name="rating" value={5} />
+            </label>
         </fieldset>
-        <button type="submit">Submit</button>
+        <button className={"submit-btn " + (isTablet ? "tp-5-semibold" : "tp-5-bold")} type="submit">SUBMIT</button>
       </form>
     </article>
   );

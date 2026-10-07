@@ -1,0 +1,105 @@
+.rating-card {
+  color: var(--color-white);
+  background: var(--gradient-1);
+  padding: var(--spacing-300);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 412px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: var(--color-grey-900);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--spacing-300);
+}
+
+.rating-card h1 {
+  margin-bottom: var(--spacing-200);
+}
+
+.rating-card p {
+  color: var(--color-grey-500);
+  margin-bottom: var(--spacing-200);
+}
+
+.rating-options {
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-200);
+  margin-bottom: var(--spacing-300);
+  flex-wrap: wrap;
+}
+
+.rating-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-500);
+}
+
+.rating-option:has(input:checked) {
+  background-color: var(--color-white);
+  color: var(--color-grey-900);
+}
+
+.rating-option:has(input:active),
+.rating-option:has(input:focus) {
+  background-color: var(--color-orange-500);
+  color: var(--color-grey-900);
+}
+
+.rating-option input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.submit-btn {
+  outline: transparent;
+  border: transparent;
+  background-color: var(--color-orange-500);
+  width: 100%;
+  padding: var(--spacing-200);
+  border-radius: 22.5px;
+}
+
+.submit-btn:active {
+  background-color: var(--color-white);
+}
+
+
+@media screen and (min-width: 768px) {
+    .rating-card {
+        padding: var(--spacing-400) var(--spacing-300);
+    }
+    .icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: var(--spacing-400);
+    }
+    .rating-options {
+        margin-bottom: var(--spacing-400);
+    }
+
+    .rating-option {
+        width: 51px;
+        height: 51px;
+    }
+
+    .submit-btn {
+        padding: var(--spacing-100) var(--spacing-200);
+    }
+}
