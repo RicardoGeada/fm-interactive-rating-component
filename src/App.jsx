@@ -9,7 +9,6 @@ function App() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log("Submit");
     if(!rating) return;
 
     setIsSubmitted(true);
