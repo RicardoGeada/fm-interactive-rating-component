@@ -1,0 +1,49 @@
+.thanks-card {
+  color: var(--color-white);
+  background: var(--gradient-1);
+  padding: var(--spacing-400) var(--spacing-300);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 412px;
+  text-align: center;
+}
+
+.thanks-card img {
+    margin-bottom: var(--spacing-300);
+}
+
+.thanks-card div {
+    color: var(--color-orange-500);
+    background-color: var(--color-grey-900);
+    padding: 0 var(--spacing-200);
+    width: fit-content;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 22.5px;
+    margin: 0 auto var(--spacing-300);
+}
+
+.thanks-card h1 {
+    margin-bottom: var(--spacing-200);
+}
+
+.thanks-card p {
+    color: var(--color-grey-500);
+}
+
+
+@media screen and (min-width:768px) {
+    .thanks-card {
+        padding: var(--spacing-500) var(--spacing-400);
+    }
+
+    .thanks-card img {
+        margin-bottom: var(--spacing-400);
+    }
+
+    .thanks-card div {
+        margin-bottom: var(--spacing-400);
+    }
+}
